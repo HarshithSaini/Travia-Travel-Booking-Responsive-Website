@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Destinations</title>
+
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="tourism.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header" data-aos="fade-down">
+
+   <section class="flex">
+
+      <a href="home.html" class="logo">Travia.</a>
+
+      <nav class="navbar">
+         <a href="home.html">home</a>
+         <a href="about.html">about</a>
+         <a href="tours.html">tours</a>
+         <a href="destinations.html">destinations</a>
+         <a href="contact.html">contact</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- destinations section starts  -->
+
+<div class="container destinations">
+
+   <h1 class="heading" data-aos="zoom-out">destinations</h1>
+
+   <section class="grid">
+
+      <div class="box" data-aos="zoom-in">
+         <img src="https://media.istockphoto.com/id/1426479288/photo/high-sophia-ayasofya-turkey-istanbul-blue-mosque-camii-sul.webp?b=1&s=170667a&w=0&k=20&c=5wIIhwu2YBAVNhAPz6WaPTTkj4tkFLFH5DExLe_Hkmg=" alt="">
+         <h3><span>istanbul</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/480000/480238-Southern-California.jpg" alt="california">
+         <h3><span>california</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f5/de/london.jpg?w=700&h=500&s=1" alt="">
+         <h3><span>london</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://www.nationsonline.org/gallery/Morocco/Chefchaouen-Morocco.jpg" alt="">
+         <h3><span>morocco</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://www.shutterstock.com/image-photo/new-york-city-skyline-cityscape-260nw-57571180.jpg" alt="">
+         <h3><span>new york</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://t4.ftcdn.net/jpg/02/96/15/35/360_F_296153501_B34baBHDkFXbl5RmzxpiOumF4LHGCvAE.jpg" alt="">
+         <h3><span>paris</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://media.istockphoto.com/id/1320014700/photo/sagrada-familia-cathedral-in-spring-barcelona-spain.jpg?s=612x612&w=0&k=20&c=a_UOwN1DS64kx_LrHefXVs1S1f1_ULg5xYqROK8IJ7E=" alt="">
+         <h3><span>barcelona</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://images.unsplash.com/photo-1528072164453-f4e8ef0d475a?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN5ZG5leXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+         <h3><span>sydney</span></h3>
+      </div>
+      <div class="box" data-aos="zoom-in">
+         <img src="https://media.istockphoto.com/id/1390815938/photo/tokyo-city-in-japan.webp?b=1&s=170667a&w=0&k=20&c=YVI8iGWf-w_cLyQNcWA57Ll9eXv_s_SHfoM0MufEMMQ=" alt="">
+         <h3><span>tokyo</span></h3>
+      </div>
+
+   </section>
+
+</div>
+
+<!-- destinations section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- custom js file link  -->
+<script>
+   // Your JavaScript code here
+   let navbar = document.querySelector('.header .flex .navbar');
+
+   document.querySelector('#menu-btn').onclick = () =>{
+      navbar.classList.toggle('active');
+   }
+
+   window.onscroll = () =>{
+      navbar.classList.remove('active');
+   }
+
+   document.querySelectorAll('input[type="number"]').forEach(inputNumber => {
+      inputNumber.oninput = () =>{
+         if(inputNumber.value.length > inputNumber.maxLength) inputNumber.value = inputNumber.value.slice(0, inputNumber.maxLength);
+      };
+   });
+
+   AOS.init({
+      duration: 400,
+      delay: 200,
+   });
+</script>
+
+</body>
+</html>

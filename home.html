@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home</title>
+
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+   <!-- Font Awesome CDN link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+   <!-- Custom CSS file link  -->
+   <link rel="stylesheet" href="tourism.css">
+</head>
+<body style="overflow: hidden">
+   <!-- header section starts  -->
+   <header class="header" data-aos="fade-down">
+      <section class="flex">
+         <a href="home.html" class="logo">Travia.</a>
+         <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="destinations.html">destinations</a>
+            <a href="tours.html">tours</a>
+           
+            <a href="contact.html">contact</a>
+         </nav>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </section>
+   </header>
+   <!-- header section ends -->
+
+   <!-- home section starts  -->
+   <div class="container home" data-aos="zoom-out">
+      <section class="flex" data-aos="zoom-in" data-aos-delay="600">
+         <form action="" method="post">
+            <h3>search your tour</h3>
+            <p>where to</p>
+            <input type="text" name="location" required maxlength="50" placeholder="enter tour location" class="box">
+            <p>when to</p>
+            <input type="date" name "date" class="box" required>
+            <p>how many</p>
+            <input type="number" name="guests" min="1" max="10" maxlength="2" placeholder="number of guests" required class="box">
+            <!-- <input type="submit" value="search tour" name="search" class="btn"> -->
+            <button class="btn" id="harshith" type="submit" href="tours.html">search tour</button>
+         </form>
+      </section>
+   </div>
+   <!-- home section ends -->
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      // Your JavaScript code here
+      let navbar = document.querySelector('.header .flex .navbar');
+      let harshith = document.getElementById("harshith");
+      console.log(harshith);
+      
+      document.querySelector('#menu-btn').onclick = () => {
+         navbar.classList.toggle('active');
+      }
+
+      window.onscroll = () => {
+         navbar.classList.remove('active');
+      }
+      
+      document.querySelectorAll('input[type="number"]').forEach(inputNumber => {
+         inputNumber.oninput = () => {
+            if (inputNumber.value.length > inputNumber.maxLength) inputNumber.value = inputNumber.value.slice(0, inputNumber.maxLength);
+         };
+      });
+   
+      // Add an event listener for the "harshith" button
+      harshith.addEventListener('click', function(event) {
+         event.preventDefault(); // Prevent the default form submission behavior
+         // Redirect to tours.html
+         window.location.href = 'tours.html';
+      });
+   
+      AOS.init({
+         duration: 400,
+         delay: 200,
+      });
+   </script>
+</body>
+</html>
